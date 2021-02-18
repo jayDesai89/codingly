@@ -1,5 +1,4 @@
 import { Observable } from 'rxjs';
-import { of } from 'rxjs/operators';
 
 // App Service
 // =========================================
@@ -21,28 +20,24 @@ const sampleResponse = {
 }
 
 // 1.
-// complete `functionOne`: fix the body of the function to return the correct type
-const functionOne = (a: ISomeResponse) : string => ''
+// complete `functionOne`: fix the body of the function to return the correct value and type
 
+const functionOne = (a: ISomeResponse) : string => ?
 
-// 2.
-// write the function `a` such that it returns the correct type when `functionTwo` is executed
 
 const functionTwo = (a: (x: ISomeResponse) => string) : string => a(b)
 
 
+// 2.
+// complete `functionThree`: write the body of the function to return the correct value based on App Component expectations
 
-
-// 3.
-// complete `functionThree`: write the body of the function the returns the correct type
 const functionThree = (b: string, a: number) : Observable<[string, number]> => ?
 
 
-
-
-// 4.
+// 3.
 // complete the function below: write the body of the function that returns the correct type
-const functionFive = (a: number) : Observable<ICustomerName> => of({first: '', last: ''})
+
+const functionFive = (a: ISomeResponse) : Observable<ICustomerName> => ?
 
 
 
@@ -54,5 +49,5 @@ const functionFive = (a: number) : Observable<ICustomerName> => of({first: '', l
 // App Component
 // ============================================
 
-const customerName = functionTwo(functionOne);
-const customerNameAndAge$ = functionThree(customerName, sampleResponse.age);
+const customerName = functionTwo(functionOne); // => Johny Bravo
+this.customerNameAndAge$ = functionThree(customerName, sampleResponse.age); // => Johny Bravo, 21
