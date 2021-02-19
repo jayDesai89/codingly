@@ -1,2 +1,63 @@
 // Use the hex codes below to style your app.html layout
-// hex codes: #d10505, #347ff0, #828081, #c7c7c7, #000000
+hex codes: #d10505,
+#347ff0,
+#828081,
+#c7c7c7,
+#000000 $red : #d10505;
+$lightBlue : #347ff0;
+$black : #000000;
+$darkGray : #828081;
+$lightGray: #c7c7c7;
+
+
+.customer-info {
+    .header {
+        .header_title {
+            color: $lightBlue;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+    }
+
+    .data {
+        .custInfo_custId {}
+
+        .custInfo_detail {
+
+            col {
+                border: 1px solid $black;
+
+                .custInfo__custAge {
+                    width: 100%;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+
+                .custInfo__custName,
+                .custInfo__custAdd {
+                    width: 100%;
+                    text-align: left;
+                }
+
+                .custInfo__custName {
+                    font-weight: bold;
+
+                    .custInfo__custName_firstName {
+                        color: $darkGray;
+                    }
+
+                    .custInfo__custName_firstName {
+                        color: $black;
+                        margin-bottom:0px;
+                    }
+                }
+
+                .custInfo__custAdd {
+                    color: $lightGray;
+                }
+
+            }
+
+        }
+    }
+}

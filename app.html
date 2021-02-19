@@ -1,2 +1,41 @@
 <!-- 1. Construct this page with a layout base on /mocks folder -->
 <!-- 2. Using async pipe, display data in reference to app.ts > App Component scope variables -->
+<article class="customer-info">
+    <section class="header">
+        <span class="header_title">Hide Customer</span>
+        <button (click)="toggleView = !toggleView"></button>
+    </section>
+    <section  *ngIf="toggleView" class="data">
+        <div *ngFor="let custInfo of array?.sampleResponse;let i = index">
+            <div>
+                <p class="custInfo_custId">
+                    Customer {{i}}
+                </p>
+                <div class="row custInfo_detail">
+                    <div class="col col-lg-3 col-sm-3">
+                        <div class="custInfo__custAge">
+                            <strong>{{array?.sampleResponse?.age}}</strong>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-sm-9">
+                        <div class="custInfo__custName">
+                            <p class="custInfo__custName_firstName">{{array?.sampleResponse?.customerName.first}}</p>
+                            <p class="custInfo__custName_lastName">{{array?.sampleResponse?.customerName.last}}</p>
+                        </div>
+
+                    </div>
+                    <div class="col col-lg-5 col-sm-12">
+                        <div class="custInfo__custAdd">
+                            <span>{{array?.sampleResponse?.customerAddress.unit}}, 
+                                {{array?.sampleResponse?.customerAddress.city}},
+                                {{array?.sampleResponse?.customerAddress.province}},
+                                {{array?.sampleResponse?.customerAddress.country}},
+                                {{array?.sampleResponse?.customerAddress.postalCode}} </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
